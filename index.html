@@ -1,65 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>/\/\/\/\/\/\/\/\</title>
+<head>
+ <title>()()()()()()()()()()()()()</title>
    <style>
 .content {
-  max-width: 500px;
+  max-width: 300px;
   margin: auto;
-background-color: #ffe9ec;
+background-color: plum;
 }
 </style>
-  </head>
-  <body>
+</head>
+<body>
 	<div class="content">
-	<marquee>Meow~</marquee>
-	<img src="pixel-cat.gif">
-    <h1>Generator liczb Lotto</h1>
-    <p>6 liczb w zakresie od 1 do 49:</p>
- <script>
-      function generateNumbers() {
-        var numbers = [];
-        while (numbers.length < 6) {
-          var randomNum = Math.floor(Math.random() * 49) + 1;
-          if (!numbers.includes(randomNum)) {
-            numbers.push(randomNum);
-          }
-        }
-        numbers.sort(function(a, b){return a - b});
-        document.getElementById("result").innerHTML = numbers.join(", ");
-      }
-    </script>
-    <button onclick="generateNumbers()">Generuj</button>
-    <p id="result"></p>
-	    <h1>Obecna data i godzina</h1>
-    <button onclick="displayDateTime()">Pokaż</button>
-    <p>Data: <span id="date"></span></p>
-    <p>Czas: <span id="time"></span></p>
-    <script>
-      function displayDateTime() {
-        var now = new Date();
-        var date = now.toDateString();
-        var time = now.toLocaleTimeString();
-        document.getElementById('date').innerHTML = date;
-        document.getElementById('time').innerHTML = time;
-      }
-    </script>
-    <button onclick="czas()">?</button>
-    <p id="message"></p>
-    <script>
-      function czas() {
-        // get the current time
-        var now = new Date();
+	<marquee>	°˖✧◝(⁰▿⁰)◜✧˖°   </marquee>
+	<img src="dsddsd.gif"></br>
+	<h1>Licznik klikniec na przycisk</h1>
+	<button onclick="lcz()">Przycisk</button>
+	<p>klikniecia: <span id="clickCount">0</span></p>
 
-        if (now.getHours() === 21 && now.getMinutes() === 37) {
+	<script>
+		var clickCount = 0;
 
-          document.getElementById("message").innerHTML = "Wesołej Papieżowej!";
-        } else {
-
-          document.getElementById("message").innerHTML = "...";
-        }
-      }
-    </script>
+		function lcz() {
+			clickCount++;
+			document.getElementById("clickCount").innerHTML = clickCount;
+		}
+	</script>
 	</div>
-  </body>
+</body>
 </html>
